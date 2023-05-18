@@ -27,7 +27,6 @@ const Product = ({ item, provider, account, contract, togglePop }) => {
     };
 
     const buyHandler = async () => {
-        console.log(item.id.toString());
         const result = await fetch("/api/amazon", {
             method: "POST",
             body: JSON.stringify({
@@ -39,7 +38,6 @@ const Product = ({ item, provider, account, contract, togglePop }) => {
             }),
         }).then((res) => res.json());
 
-        console.log(result);
         renderPaperCheckoutLink({
             checkoutLinkUrl: result.checkoutLinkIntentUrl,
         });
