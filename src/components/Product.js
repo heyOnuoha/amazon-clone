@@ -109,8 +109,16 @@ const Product = ({ item, provider, account, contract, togglePop }) => {
 
                     {item.stock > 0 ? <p>In Stock.</p> : <p>Out of Stock.</p>}
 
-                    <button className="product__buy" onClick={buyHandler}>
-                        Buy Now
+                    <button
+                        className="product__buy"
+                        onClick={buyHandler}
+                        disabled={item.stock == 0}
+                    >
+                        {item.stock > 0 ? (
+                            <span>Buy Now</span>
+                        ) : (
+                            <span>Out of Stock</span>
+                        )}
                     </button>
 
                     <p>

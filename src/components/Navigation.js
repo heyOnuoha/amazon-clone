@@ -1,6 +1,5 @@
 import { ethers } from "ethers";
 import { useState, useEffect } from "react";
-import { ConnectButton } from "@paperxyz/embedded-wallet-service-rainbowkit";
 
 const Navigation = ({ account, setAccount }) => {
     return (
@@ -10,8 +9,6 @@ const Navigation = ({ account, setAccount }) => {
             </div>
 
             <input type="text" className="nav__search" />
-
-            <ConnectButton />
 
             <ul className="nav__links">
                 <li>
