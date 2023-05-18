@@ -1,9 +1,6 @@
 import { ethers } from "ethers";
 import { useState, useEffect } from "react";
-import {
-    ConnectButton,
-    PaperEmbeddedWalletProvider,
-} from "@paperxyz/embedded-wallet-service-rainbowkit";
+import { ConnectButton } from "@paperxyz/embedded-wallet-service-rainbowkit";
 
 const Navigation = ({ account, setAccount }) => {
     return (
